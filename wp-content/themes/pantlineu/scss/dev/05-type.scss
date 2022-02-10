@@ -87,20 +87,26 @@ a {
   }
 }
 
-blockquote {
-  margin: 1.5em 2em;
-  quotes: "\201C""\201D""\2018""\2019";
+.wp-block-quote, blockquote {
+  margin: 1.5em 2em 4em;
+  // quotes: "\201C""\201D""\2018""\2019";
+  border-left: 3px solid $greyblue;
   @include blockquote;
   &::before {
-    color: #ccc;
+    color: $greyblue;
     content: open-quote;
-    font-size: 4em;
+    font-size: 3em;
     line-height: 0.1em;
     margin-right: 0.25em;
     vertical-align: -0.4em;
   }
   p {
     display: inline;
+
+  }
+  cite {
+    display: block;
+    margin-top: 1em;
   }
 }
 

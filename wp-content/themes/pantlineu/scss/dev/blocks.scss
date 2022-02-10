@@ -20,3 +20,16 @@
     }
   }
 }
+
+.wp-block-columns {
+  margin: $content-padding 0;
+  @include tablet-landscape {
+    margin: $content-padding-tl 0;
+  }
+  @include tablet-portrait {
+    margin: $content-padding-tp 0;
+  }
+  @include mobile-portrait {
+    margin: $content-padding-mp 0;
+  }
+}

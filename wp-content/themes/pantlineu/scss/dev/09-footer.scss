@@ -16,7 +16,7 @@ footer.c-site-footer {
 .c-site-footer__inner {
   text-align: center;
   img {
-    width: 300px;
+    width: 180px;
   }
   p {
     @include smallbodytext;
@@ -31,14 +31,13 @@ footer.c-site-footer {
     li {
       margin: 0 0.3em;
       padding: 0;
-      @include smallbodytext;
       a {
         display: block;
         padding: 0.2em 0.8em;
       }
       &.current-menu-item,
       &.current-menu-parent {
-        background-color: $black;
+        color: $greyblue;
       }
       &.current-menu-item {
         pointer-events: none;

@@ -43,13 +43,13 @@ gulp.task('build-sass-dev', function () {
 
 gulp.task('build-sass', function () {
   return gulp.src('../scss/dist/*.scss')
-    // .pipe(sourcemaps.init())
+    .pipe(sourcemaps.init())
       .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
       .pipe(autoprefixer({
         browsers: ['last 2 versions'],
         cascade: false
       }))
-    // .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('../css/dist'));
 });
 

@@ -265,8 +265,11 @@ class subNavWrap extends Walker_Nav_Menu
 // add button class to home menu
 function wpdocs_channel_nav_class( $classes, $item, $args ) {
  
-    if ( 'home' === $args->theme_location || 'footer' === $args->theme_location ) {
-        $classes[] = "c-button";
+    if ( 'home' === $args->theme_location) {
+        $classes[] = "c-button c-button--outline";
+    }
+    if ( 'footer' === $args->theme_location) {
+        $classes[] = "c-button c-button--small";
     }
  
     return $classes;

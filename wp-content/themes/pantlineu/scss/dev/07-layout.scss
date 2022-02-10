@@ -113,7 +113,23 @@ body {
   }
 }
 
-
+.l-wide-content {
+  background-color: $white;
+  &__wrapper {
+    padding: $content-padding;
+    max-width: $content-width;
+    margin: 0 auto;
+  }
+  @include tablet-landscape {
+    padding: $content-padding-tl;
+  }
+  @include tablet-portrait {
+    padding: $content-padding-tp;
+  }
+  @include mobile-portrait {
+    padding: $content-padding-mp 0;
+  }
+}
 
 /*------------------------------------*\
 :    Layout - Image Container

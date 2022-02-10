@@ -292,7 +292,7 @@ function allowed_core_gutenberg_blocks() {
     'core/separator', // horizontal separator between blocks - Short Line, Wide Line, Dots
     'core/spacer', // to create an extra padding between blocks
     'core/text-columns', // css columns (2-6) that can hold text or other blocks
-    // 'core/button', // button with text, link and custom styling
+    'core/button', // button with text, link and custom styling
     // 'core/media-text', // media and words side-by-side 
     // 'core/more', // Mark the excerpt of this content. Content before this block will be shown in the excerpt on your archives page
     // 'core/nextpage', // Separate your content into a multi-page experience
@@ -342,7 +342,7 @@ function allowed_core_gutenberg_blocks() {
     // 'core-embed/wordpress-tv',
   );
 }
-add_filter( 'allowed_block_types', 'allowed_core_gutenberg_blocks' );
+// add_filter( 'allowed_block_types', 'allowed_core_gutenberg_blocks' );
 
 function my_gutenberg_blocks() {
   return array(
