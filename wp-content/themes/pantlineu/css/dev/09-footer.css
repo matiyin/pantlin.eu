@@ -1,0 +1,123 @@
+/*------------------------------------*\
+:    Variables
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Type
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Flexbox
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Miscellaneous
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Media Queries
+\*------------------------------------*/
+/*---------------------------------------*\
+:    Mixins - Mobile-first Media Queries
+:    Usage @include media(tablet) {}
+\*---------------------------------------*/
+/*------------------------------------*\
+:    Footer
+\*------------------------------------*/
+footer.c-site-footer {
+  margin: 200px 0; }
+  @media (min-width: 0px) and (max-width: 767px) {
+    footer.c-site-footer {
+      margin: 100px 0; } }
+
+.c-site-footer__inner {
+  text-align: center; }
+  .c-site-footer__inner img {
+    width: 300px; }
+  .c-site-footer__inner p {
+    font-size: 18px; }
+    @media (min-width: 0px) and (max-width: 1024px) {
+      .c-site-footer__inner p {
+        font-size: 15px; } }
+    @media (min-width: 0px) and (max-width: 767px) {
+      .c-site-footer__inner p {
+        font-size: 15px; } }
+
+.c-footer-nav ul {
+  margin-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .c-footer-nav ul li {
+    margin: 0 0.3em;
+    padding: 0;
+    font-size: 18px; }
+    @media (min-width: 0px) and (max-width: 1024px) {
+      .c-footer-nav ul li {
+        font-size: 15px; } }
+    @media (min-width: 0px) and (max-width: 767px) {
+      .c-footer-nav ul li {
+        font-size: 15px; } }
+    .c-footer-nav ul li a {
+      display: block;
+      padding: 0.2em 0.8em; }
+    .c-footer-nav ul li.current-menu-item, .c-footer-nav ul li.current-menu-parent {
+      background-color: #2b4254; }
+    .c-footer-nav ul li.current-menu-item {
+      pointer-events: none; }
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .c-footer-nav ul {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .c-footer-nav ul li {
+      margin: 0 0 1em;
+      font-size: 22px;
+      width: 100%; } }
+
+.home .c-footer-nav .home {
+  display: none; }
+
+/* Cookie bar */
+#cookie-bar {
+  background: rgba(43, 66, 84, 0.9);
+  height: auto;
+  text-align: center;
+  padding: 20px 20px;
+  font-size: 16px; }
+  @media (min-width: 0px) and (max-width: 320px) {
+    #cookie-bar {
+      font-size: 14px; } }
+  #cookie-bar.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; }
+  #cookie-bar.fixed.bottom {
+    bottom: 0;
+    top: auto; }
+  #cookie-bar p {
+    margin: 0;
+    padding: 0;
+    color: #ffffff; }
+  #cookie-bar a {
+    color: #ffffff;
+    font-style: italic;
+    display: inline-block;
+    border-radius: 3px;
+    text-decoration: none;
+    padding: 0 6px;
+    margin-left: 8px; }
+    #cookie-bar a:hover {
+      text-decoration: underline; }
+  #cookie-bar .cb-enable {
+    background: #2b4254;
+    color: #ffffff;
+    font-style: normal;
+    padding: 5px 10px; }
+    #cookie-bar .cb-enable:hover {
+      background: #ffffff;
+      color: #2b4254;
+      text-decoration: none; }
+
+/*# sourceMappingURL=maps/09-footer.css.map */

@@ -1,0 +1,23 @@
+{
+  "name": "pantlin.eu",
+  "version": "1.0.0",
+  "description": "Wordpress theme development tools JS",
+  "main": "general.js",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-real-favicon": "^0.3.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^4.11.0",
+    "pump": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Martijn Pantlin | Orgone Media",
+  "license": "ISC",
+  "dependencies": {}
+}

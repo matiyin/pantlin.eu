@@ -1,0 +1,22 @@
+// Framework
+@import "variables.scss";
+@import "mixins.scss";
+
+/*------------------------------------*\
+:    Optional for Gutenberg blocks
+\*------------------------------------*/
+
+.wp-block-image {
+  &.alignwide {
+    margin-left: calc(1 / 12 * -100vw);
+    margin-right: calc(1 / 12 * -100vw);
+    max-width: none;
+    @include tablet-landscape {
+      margin-left: calc(1 / 12 * -100vw);
+      margin-right: calc(1 / 12 * -100vw);
+    }
+    @include tablet-portrait-down {
+      margin: 0;
+    }
+  }
+}

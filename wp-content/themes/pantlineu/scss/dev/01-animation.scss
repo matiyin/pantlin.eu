@@ -1,0 +1,118 @@
+// Framework
+@import "variables.scss";
+@import "mixins.scss";
+
+/*------------------------------------*\
+:    CSS3 animations & effects
+\*------------------------------------*/
+
+// site content fade in
+body {
+  .l-site-container {
+    opacity: 0;
+    will-change: opacity;
+    transition: opacity 1s 0.3s;
+  }
+  &.has-loaded {
+    .l-site-container {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin buttonClick($color:$white) {
+  position: relative;
+  transition: all 0.3s ease-in;
+  overflow: hidden;
+  //start click effect
+  &:not(.c-button--spot):before {
+    content: '';
+    background-color: $color;
+    //border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    mix-blend-mode: overlay;
+    transform: scale(0.001, 0.001);
+  }
+  &:not(.c-button--spot):focus {
+    outline: 0;
+    //color: $black;
+    &:before {
+      animation: clickEffect 0.8s ease-out;
+    }
+  }
+  @keyframes clickEffect {
+    50% {
+      transform: scale(1.5, 1.5);
+      opacity: 0;
+    }
+    99% {
+      transform: scale(0.001, 0.001);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(0.001, 0.001);
+      opacity: .8;
+    }
+  }
+}
+
+@mixin buttonLoading($color:$white) {
+  position: relative;
+  transition: all 0.4s ease-in;
+  overflow: hidden;
+  //start loading effect
+  &:not(.c-button--spot):before {
+    content: '';
+    background-color: $color;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    mix-blend-mode: hue;
+    transform: translateX(-100%);
+  }
+  &:not(.c-button--spot):active {
+    background-color: $red!important;
+    outline: 0;
+    &:before {
+      animation: loadingEffect 0.3s linear;
+    }
+  }
+  @keyframes loadingEffect {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+@mixin selectChange($color:$red) {
+  position: relative;
+  transition: all 0.4s ease-in;
+  overflow: hidden;
+  background-visibily: visible;
+  transform: rotateX(0);
+  &.has-changed {
+    outline: 0;
+    color: $white;
+    background-color: $color;
+    animation: changeEffect 0.8s ease-out;
+  }
+  @keyframes changeEffect {
+    50% {
+      transform: rotateX(0deg);
+    }
+    100% {
+      transform: rotateX(360deg);
+    }
+  }
+}

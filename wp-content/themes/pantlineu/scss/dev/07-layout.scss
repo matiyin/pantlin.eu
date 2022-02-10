@@ -1,0 +1,195 @@
+// Framework
+@import "variables.scss";
+@import "mixins.scss";
+
+
+/*------------------------------------*\
+:    Layout - General
+\*------------------------------------*/
+
+body {
+  overflow-y: scroll;
+  &.has-loaded {
+    .l-site-container,
+    .c-site-nav-button {
+      opacity: 1;
+    }
+  }
+}
+
+.l-site-wrapper {
+  min-height: 100%;
+  margin: 0 auto (-$footer-height) auto;
+}
+
+// .c-site-footer,
+// .c-footer-push {
+//   height: $footer-height;
+// }
+
+.l-site-container {
+  width: 100%;
+  max-width: $site-width;
+  margin: auto;
+  opacity: 0;
+  padding-top: 40px;
+  @include tablet-portrait-down {
+    padding-top: 36px;
+  }
+}
+
+.l-content-container {
+  width: 100%;
+  max-width: $content-width;
+  padding: 0 $content-padding;
+  margin: auto;
+  @include tablet-landscape {
+    padding: 0 $content-padding-tl;
+  }
+  @include tablet-portrait {
+    padding: 0 $content-padding-tp;
+  }
+  @include mobile-portrait {
+    padding: 0 $content-padding-mp;
+  }
+}
+
+.l-body-wrapper {
+  padding-top: $content-padding;
+  @include tablet-landscape {
+    padding-top: $content-padding-tl;
+  }
+  @include tablet-portrait {
+    padding-top: $content-padding-tp;
+  }
+  @include mobile-portrait {
+    padding-top: $content-padding-mp;
+  }
+}
+
+.l-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  transition: opacity 0.3s ease-in;
+  @include tablet-landscape {
+  }
+  @include tablet-landscape-down {
+  }
+  @include tablet-portrait-down {
+  }
+}
+
+.l-side {
+  grid-column: 1 / 5;
+  @include tablet-portrait {
+    grid-column: 2 / 12;
+  }
+  @include tablet-portrait-down {
+    padding-bottom: 20px;
+  }
+}
+
+.l-main-content {
+  margin-top: 2em;
+  grid-column: 5 / 12;
+  @include tablet-portrait {
+    grid-column: 2 / 12;
+  }
+  @include tablet-portrait-down {
+    margin-top: 0;
+  }
+}
+
+.single, .home {
+  .l-main-content {
+    margin-top: 21px;
+  }
+}
+
+.l-reading-plane {
+  max-width: $max-reading-width;
+  @include tablet-landscape-down {
+    max-width: none;
+  }
+}
+
+
+
+/*------------------------------------*\
+:    Layout - Image Container
+\*------------------------------------*/
+
+.h-img-container {
+  background-size: cover;
+  background-position: center center;
+  img,
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+:    Layout - Video Container
+\*------------------------------------*/
+
+video,
+object,
+iframe {
+  max-width: 100%;
+}
+
+.h-video-container,
+.h-sound-container {
+  position: relative;
+  padding: #{(9 / 16) * 100% / 2} 0;
+  height: 0;
+  margin-bottom: 40px;
+  background-size: cover;
+  background-position: center center;
+  transition: padding 0.5s ease-in-out;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  iframe,
+  video,
+  object,
+  img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; // height: auto;
+  }
+}
+
+
+/*------------------------------------*\
+:    Layout - Fade Filter
+\*------------------------------------*/
+
+.c-fade-filter {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  right: -100px;
+  bottom: -100px;
+  background: $lightblue;
+  z-index: -1;
+  opacity: 0;
+  mix-blend-mode: multiply;
+  transition: opacity 0.3s ease-in-out, z-index 10ms 0.3s ease-in-out;
+  pointer-events: none;
+  &.is-active {
+    z-index: 90;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, z-index 10ms ease-in-out;
+    pointer-events: auto;
+  }
+}

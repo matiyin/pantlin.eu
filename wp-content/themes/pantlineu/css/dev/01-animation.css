@@ -1,0 +1,32 @@
+/*------------------------------------*\
+:    Variables
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Type
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Flexbox
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Miscellaneous
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Media Queries
+\*------------------------------------*/
+/*---------------------------------------*\
+:    Mixins - Mobile-first Media Queries
+:    Usage @include media(tablet) {}
+\*---------------------------------------*/
+/*------------------------------------*\
+:    CSS3 animations & effects
+\*------------------------------------*/
+body .l-site-container {
+  opacity: 0;
+  will-change: opacity;
+  -webkit-transition: opacity 1s 0.3s;
+  transition: opacity 1s 0.3s; }
+
+body.has-loaded .l-site-container {
+  opacity: 1; }
+
+/*# sourceMappingURL=maps/01-animation.css.map */

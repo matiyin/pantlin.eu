@@ -1,0 +1,71 @@
+
+// Framework
+@import "variables.scss";
+@import "mixins.scss";
+// CSS Animation
+// @import "01-animation.scss";
+
+/*------------------------------------*\
+:    Buttons
+\*------------------------------------*/
+
+.c-button,
+.btn,
+.gform_button {
+  background-color: $blue;
+  padding: 0.2em 1em;
+  color: $white;
+  // text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  display: inline-block;
+  @include headingfont;
+  @include buttontext;
+  transition: all 0.2s ease-out;
+
+  a {
+    color: inherit;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  // &:not(.c-select):not(.c-site-nav-button):not([href]) {
+  //   @include buttonClick();
+  // }
+
+  &:hover {
+    background-color: $black;
+    color: $lightgrey;
+    text-decoration: none!important;
+  }
+
+  &--grey {
+    background-color: $lightgrey;
+    color: $black;
+  }
+
+  &--small {
+    padding: 0.3em 0.6em;
+    text-transform: none;
+    height: auto;
+    line-height: 1em;
+    @include buttontextsmall;
+  }
+  @include tablet-landscape {
+  }
+}
+
+/* suppress hover effect on devices that don't support hover fully */
+@media (hover:none),
+(hover:on-demand) {
+  button,
+  .c-button {
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+// Framework
+@import "../dev/variables.scss";
+@import "../dev/mixins.scss";
+
+// Vendor
+@import "../dev/00-vendor.scss";
+
+// Modules
+@import "../dev/01-animation.scss";
+@import "../dev/02-buttons.scss";
+@import "../dev/03-icons.scss";
+@import "../dev/04-forms.scss";
+@import "../dev/05-type.scss";
+
+// Custom
+body {
+  background-image: none;
+  padding: $content-padding;
+  background-color: #fff;
+  @include tablet-portrait-down {
+    padding: 40px 0;
+  }
+}
+table {
+  background-color: transparent;
+  td {
+    padding: 10px;
+    width: auto;
+    font {
+      @include smallbodytext;
+      @include bodyfont;
+    }
+    a {
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+  @include tablet-portrait-down {
+    td {
+      padding: 5px;
+    }
+  }
+}
+
+p {
+  max-width: 720px;
+}
+
+img[src="bluediam.gif"] {
+  display: none;
+}
+
+img[src="bar_wh.gif"] {
+  opacity: 0;
+  padding-bottom: 1em; 
+}

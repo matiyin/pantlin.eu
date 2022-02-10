@@ -1,0 +1,169 @@
+// Framework
+@import "variables.scss";
+@import "mixins.scss";
+
+
+// @import url('https://fonts.googleapis.com/css?family=Noto+Serif|Open+Sans:300,400,400i,600,700');
+@import url('https://fonts.googleapis.com/css?family=Alegreya:400,400i,500,700|Montserrat:300,400,500');
+
+/*------------------------------------*\
+:    General Type Settings
+\*------------------------------------*/
+
+html {
+  @include bodytext;
+}
+
+body {
+  color: $black;
+  @include bodyfont;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0.5em;
+  @include headingfont;
+}
+
+h1 {
+  line-height: 1.1;
+  margin-bottom: 0.25em;
+  color: $red;
+  position: relative;
+  padding-top: 0.5em;
+  @include hugeheader;
+  &:before {
+    content: "";
+    height: 3px;
+    background-color: $black;
+    width: 100px;
+    margin-bottom: 0.3em;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  @include tablet-portrait-down {
+    padding-top: 1em;
+  }
+}
+
+h2 {
+  color: $blue;
+  @include mediumheader;
+}
+
+h3, h2.tagline {
+  @include smallheader;
+}
+
+h4 {
+  font-weight: 500;
+}
+
+p {
+  margin: 0 0 1em;
+  line-height: 1.4;
+  &:last-child {
+    margin: 0;
+  }
+  &.has-drop-cap:not(:focus)::first-letter {
+    float: left;
+    font-size: 5.2em;
+    line-height: .68;
+    font-weight: 400;
+    margin: .05em .1em 0 0;
+    text-transform: uppercase;
+    font-style: normal;
+  }
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+blockquote {
+  margin: 1.5em 2em;
+  quotes: "\201C""\201D""\2018""\2019";
+  @include blockquote;
+  &::before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  p {
+    display: inline;
+  }
+}
+
+b,
+strong {
+  font-weight: 500;
+}
+
+label {
+  @include headingfont;
+}
+
+// lists is the content
+article {
+  line-height: $bodytext-line-height;
+  ul {
+    margin: 0 0 1em 1em;
+    li {
+      &::before {
+        content: "•";
+        color: $primary;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
+    }
+  }
+  ol {
+    margin: 0 0 1em 1em;
+    counter-reset: li-counter;
+    li {
+      &::before {
+        content: counter(li-counter);
+        counter-increment: li-counter;
+        color: $primary;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
+    }
+  }
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal;
+}

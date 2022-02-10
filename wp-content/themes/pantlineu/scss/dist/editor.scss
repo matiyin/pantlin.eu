@@ -1,0 +1,33 @@
+/* Worpdress visual editor syles  */
+
+// Framework
+@import "../dev/variables.scss";
+@import "../dev/mixins.scss";
+
+.editor-styles-wrapper {
+  color: $black;
+  @include bodyfont;
+  @include bodytext;
+  // Vendor
+  // @import "../dev/00-vendor.scss";
+
+  // Modules
+  @import "../dev/01-animation.scss";
+  @import "../dev/02-buttons.scss";
+  @import "../dev/03-icons.scss";
+  @import "../dev/04-forms.scss";
+  @import "../dev/05-type.scss";
+
+  // Base
+  // @import "../dev/06-header.scss";
+  // @import "../dev/07-layout.scss";
+  // @import "../dev/08-main.scss";
+  // @import "../dev/09-footer.scss";
+  // @import "../dev/10-blog.scss";
+  // @import "../dev/blocks.scss";
+
+  // .editor-styles-wrapper p {
+  //   font-size: 22px!important;
+  //   line-height: 1.4!important;
+  // }
+}

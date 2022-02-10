@@ -1,0 +1,175 @@
+/*------------------------------------*\
+:    Variables
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Type
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Flexbox
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Miscellaneous
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Media Queries
+\*------------------------------------*/
+/*---------------------------------------*\
+:    Mixins - Mobile-first Media Queries
+:    Usage @include media(tablet) {}
+\*---------------------------------------*/
+/*------------------------------------*\
+:    Layout - General
+\*------------------------------------*/
+body {
+  overflow-y: scroll; }
+  body.has-loaded .l-site-container,
+  body.has-loaded .c-site-nav-button {
+    opacity: 1; }
+
+.l-site-wrapper {
+  min-height: 100%;
+  margin: 0 auto -250px auto; }
+
+.l-site-container {
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+  opacity: 0;
+  padding-top: 40px; }
+  @media (min-width: 0px) and (max-width: 767px) {
+    .l-site-container {
+      padding-top: 36px; } }
+
+.l-content-container {
+  width: 100%;
+  max-width: 1360px;
+  padding: 0 50px;
+  margin: auto; }
+  @media (min-width: 0px) and (max-width: 1024px) {
+    .l-content-container {
+      padding: 0 40px; } }
+  @media (min-width: 0px) and (max-width: 800px) {
+    .l-content-container {
+      padding: 0 30px; } }
+  @media (min-width: 0px) and (max-width: 500px) {
+    .l-content-container {
+      padding: 0 20px; } }
+
+.l-body-wrapper {
+  padding-top: 50px; }
+  @media (min-width: 0px) and (max-width: 1024px) {
+    .l-body-wrapper {
+      padding-top: 40px; } }
+  @media (min-width: 0px) and (max-width: 800px) {
+    .l-body-wrapper {
+      padding-top: 30px; } }
+  @media (min-width: 0px) and (max-width: 500px) {
+    .l-body-wrapper {
+      padding-top: 20px; } }
+
+.l-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in; }
+
+.l-side {
+  grid-column: 1 / 5; }
+  @media (min-width: 0px) and (max-width: 800px) {
+    .l-side {
+      grid-column: 2 / 12; } }
+  @media (min-width: 0px) and (max-width: 767px) {
+    .l-side {
+      padding-bottom: 20px; } }
+
+.l-main-content {
+  margin-top: 2em;
+  grid-column: 5 / 12; }
+  @media (min-width: 0px) and (max-width: 800px) {
+    .l-main-content {
+      grid-column: 2 / 12; } }
+  @media (min-width: 0px) and (max-width: 767px) {
+    .l-main-content {
+      margin-top: 0; } }
+
+.single .l-main-content, .home .l-main-content {
+  margin-top: 21px; }
+
+.l-reading-plane {
+  max-width: 720px; }
+  @media (min-width: 0px) and (max-width: 1023px) {
+    .l-reading-plane {
+      max-width: none; } }
+
+/*------------------------------------*\
+:    Layout - Image Container
+\*------------------------------------*/
+.h-img-container {
+  background-size: cover;
+  background-position: center center; }
+  .h-img-container img,
+  .h-img-container svg {
+    display: block;
+    width: 100%;
+    height: auto; }
+
+/*------------------------------------*\
+:    Layout - Video Container
+\*------------------------------------*/
+video,
+object,
+iframe {
+  max-width: 100%; }
+
+.h-video-container,
+.h-sound-container {
+  position: relative;
+  padding: 28.125% 0;
+  height: 0;
+  margin-bottom: 40px;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transition: padding 0.5s ease-in-out;
+  transition: padding 0.5s ease-in-out; }
+  .h-video-container:last-child,
+  .h-sound-container:last-child {
+    margin-bottom: 0; }
+  .h-video-container iframe,
+  .h-video-container video,
+  .h-video-container object,
+  .h-video-container img,
+  .h-sound-container iframe,
+  .h-sound-container video,
+  .h-sound-container object,
+  .h-sound-container img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+/*------------------------------------*\
+:    Layout - Fade Filter
+\*------------------------------------*/
+.c-fade-filter {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  right: -100px;
+  bottom: -100px;
+  background: #44a5ec;
+  z-index: -1;
+  opacity: 0;
+  mix-blend-mode: multiply;
+  -webkit-transition: opacity 0.3s ease-in-out, z-index 10ms 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, z-index 10ms 0.3s ease-in-out;
+  pointer-events: none; }
+  .c-fade-filter.is-active {
+    z-index: 90;
+    opacity: 1;
+    -webkit-transition: opacity 0.3s ease-in-out, z-index 10ms ease-in-out;
+    transition: opacity 0.3s ease-in-out, z-index 10ms ease-in-out;
+    pointer-events: auto; }
+
+/*# sourceMappingURL=maps/07-layout.css.map */

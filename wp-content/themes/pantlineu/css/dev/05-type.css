@@ -1,0 +1,173 @@
+@charset "UTF-8";
+/*------------------------------------*\
+:    Variables
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Type
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Flexbox
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Miscellaneous
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Media Queries
+\*------------------------------------*/
+/*---------------------------------------*\
+:    Mixins - Mobile-first Media Queries
+:    Usage @include media(tablet) {}
+\*---------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Alegreya:400,400i,500,700|Montserrat:300,400,500");
+/*------------------------------------*\
+:    General Type Settings
+\*------------------------------------*/
+html {
+  font-size: 22px; }
+  @media (min-width: 0px) and (max-width: 1024px) {
+    html {
+      font-size: 20px; } }
+  @media (min-width: 0px) and (max-width: 767px) {
+    html {
+      font-size: 20px; } }
+
+body {
+  color: #2b4254;
+  font-family: 'Alegreya', serif; }
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0.5em;
+  font-family: 'Montserrat', serif; }
+
+h1 {
+  line-height: 1.1;
+  margin-bottom: 0.25em;
+  color: #f25132;
+  position: relative;
+  padding-top: 0.5em;
+  font-size: 64px; }
+  @media (min-width: 0px) and (max-width: 1024px) {
+    h1 {
+      font-size: 56px; } }
+  @media (min-width: 0px) and (max-width: 767px) {
+    h1 {
+      font-size: 38px; } }
+  h1:before {
+    content: "";
+    height: 3px;
+    background-color: #2b4254;
+    width: 100px;
+    margin-bottom: 0.3em;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0; }
+  @media (min-width: 0px) and (max-width: 767px) {
+    h1 {
+      padding-top: 1em; } }
+
+h2 {
+  color: #2d72a9;
+  font-size: 32px; }
+  @media (min-width: 0px) and (max-width: 1024px) {
+    h2 {
+      font-size: 30px; } }
+  @media (min-width: 0px) and (max-width: 767px) {
+    h2 {
+      font-size: 26px; } }
+
+h3, h2.tagline {
+  font-size: 28px; }
+  @media (min-width: 0px) and (max-width: 1024px) {
+    h3, h2.tagline {
+      font-size: 26px; } }
+  @media (min-width: 0px) and (max-width: 767px) {
+    h3, h2.tagline {
+      font-size: 24px; } }
+
+h4 {
+  font-weight: 500; }
+
+p {
+  margin: 0 0 1em;
+  line-height: 1.4; }
+  p:last-child {
+    margin: 0; }
+  p.has-drop-cap:not(:focus)::first-letter {
+    float: left;
+    font-size: 5.2em;
+    line-height: .68;
+    font-weight: 400;
+    margin: .05em .1em 0 0;
+    text-transform: uppercase;
+    font-style: normal; }
+
+a {
+  color: #2d72a9;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+blockquote {
+  margin: 1.5em 2em;
+  quotes: "“" "”" "‘" "’";
+  font-size: 22px; }
+  blockquote::before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em; }
+  blockquote p {
+    display: inline; }
+
+b,
+strong {
+  font-weight: 500; }
+
+label {
+  font-family: 'Montserrat', serif; }
+
+article {
+  line-height: 1.4; }
+  article ul {
+    margin: 0 0 1em 1em; }
+    article ul li::before {
+      content: "•";
+      color: #2d72a9;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em; }
+  article ol {
+    margin: 0 0 1em 1em;
+    counter-reset: li-counter; }
+    article ol li::before {
+      content: counter(li-counter);
+      counter-increment: li-counter;
+      color: #2d72a9;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal; }
+
+/*# sourceMappingURL=maps/05-type.css.map */

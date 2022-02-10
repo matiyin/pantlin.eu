@@ -1,0 +1,117 @@
+// Framework
+@import "variables.scss";
+@import "mixins.scss";
+
+/*------------------------------------*\
+:    Footer
+\*------------------------------------*/
+
+footer.c-site-footer {
+  margin: $content-padding*4 0;
+  @include tablet-portrait-down {
+    margin: $content-padding-mp*5 0;
+  }
+}
+
+.c-site-footer__inner {
+  text-align: center;
+  img {
+    width: 300px;
+  }
+  p {
+    @include smallbodytext;
+  }
+}
+
+.c-footer-nav {
+  ul {
+    margin-bottom: $content-padding*2;
+    display: flex;
+    justify-content: center;
+    li {
+      margin: 0 0.3em;
+      padding: 0;
+      @include smallbodytext;
+      a {
+        display: block;
+        padding: 0.2em 0.8em;
+      }
+      &.current-menu-item,
+      &.current-menu-parent {
+        background-color: $black;
+      }
+      &.current-menu-item {
+        pointer-events: none;
+      }
+    }
+  }
+  @include tablet-portrait-down {
+    ul {
+      flex-wrap: wrap;
+      li {
+        margin: 0 0 1em;
+        font-size: 22px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.home .c-footer-nav .home {
+  display: none;
+}
+
+.l-footer-content-wrapper {
+}
+
+/* Cookie bar */
+
+#cookie-bar {
+    background: rgba($black, 0.9);
+    height: auto;
+    text-align: center;
+    padding: 20px 20px;
+    font-size: 16px;
+    @include mobile-small {
+        font-size: 14px;
+    }
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+    }
+    &.fixed.bottom {
+        bottom: 0;
+        top: auto;
+    }
+    p {
+        margin: 0;
+        padding: 0;
+        color: $white;
+    }
+    a {
+        color: $white;
+        font-style: italic;
+        display: inline-block;
+        border-radius: 3px;
+        text-decoration: none;
+        padding: 0 6px;
+        margin-left: 8px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .cb-enable {
+        background: $black;
+        color: $white;
+        font-style: normal;
+        padding: 5px 10px;
+        &:hover {
+            background: $white;
+            color: $black;
+            text-decoration: none;
+        }
+    }
+}

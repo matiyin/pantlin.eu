@@ -1,0 +1,402 @@
+/*------------------------------------*\
+:    Mixins - Type
+\*------------------------------------*/
+
+@mixin bodyfont {
+  font-family: 'Alegreya', serif;
+} 
+
+@mixin sansfont {
+  font-family: 'Raleway', sans-serif;
+} 
+
+@mixin headingfont {
+  font-family: 'Montserrat', serif;
+}
+
+@mixin xhugeheader {
+  font-size: 80px;
+}
+// h1
+@mixin hugeheader {
+  font-size: 64px;
+  @include tablet-landscape {
+    font-size: 56px;
+  }
+  @include tablet-portrait-down {
+    font-size: 38px;
+  }
+}
+// section-title
+@mixin xlargeheader {
+  font-size: 48px;
+  @include tablet-landscape {
+    font-size: 44px;
+  }
+
+  @include tablet-portrait-down {
+    font-size: 36px;
+  }
+}
+
+// h2
+@mixin mediumheader {
+  font-size: 32px;
+  @include tablet-landscape {
+    font-size: 30px;
+  }
+  @include tablet-portrait-down {
+    font-size: 26px;
+  }
+}
+// c-intro
+@mixin introheader {
+  font-size: 30px;
+  @include tablet-landscape {
+    font-size: 28px;
+  }
+  @include tablet-portrait-down {
+    font-size: 26px;
+  }
+}
+// h3, tagline
+@mixin smallheader {
+  font-size: 28px;
+  @include tablet-landscape {
+    font-size: 26px;
+  }
+  @include tablet-portrait-down {
+    font-size: 24px;
+  }
+}
+
+@mixin largebodytext {
+  font-size: 26px;
+  @include tablet-landscape {
+    font-size: 24px;
+  }
+  @include tablet-portrait-down {
+    font-size: 22px;
+  }
+}
+
+@mixin bodytext {
+  font-size: 22px;
+  @include tablet-landscape {
+    font-size: 20px;
+  }
+  @include tablet-portrait-down {
+    font-size: 20px;
+  }
+}
+
+@mixin smallbodytext {
+  font-size: 18px;
+  @include tablet-landscape {
+    font-size: 15px;
+  }
+  @include tablet-portrait-down {
+    font-size: 15px;
+  }
+}
+
+@mixin xsmallbodytext {
+  font-size: 16px;
+  @include tablet-landscape {
+    font-size: 14px;
+  }
+  @include tablet-portrait-down {
+    font-size: 12px;
+  }
+}
+
+@mixin buttontext {
+  font-size: 20px;
+}
+
+@mixin buttontextsmall {
+  font-size: 16px;
+}
+
+@mixin blockquote {
+  font-size: 22px;
+}
+
+@mixin caption {
+  font-size: 14px;
+}
+
+
+// nav menu
+@mixin navtext {
+  font-size: 26px;
+  @media (min-width: 0px) and(max-width: 1150px) {
+    font-size: 24px;
+  }
+  @media (min-width: 0px) and(max-width: 1080px) {
+    font-size: 20px;
+  }
+  @include tablet-landscape-down {
+    font-size: 18px;
+  }
+  @include tablet-portrait-down {
+    font-size: 26px;
+  }
+}
+
+// sub nav menu
+@mixin subnavtext {
+  font-size: 22px;
+  @include tablet-landscape {
+    font-size: 18px;
+  }
+}
+
+/*------------------------------------*\
+:    Mixins - Flexbox
+\*------------------------------------*/
+
+// @mixin flexcontainer {
+//   display: -ms-flexbox;
+//   @include display-flex;
+//   body.ie9 & {
+//     @include pie-clearfix;
+//   }
+// }
+
+// @mixin flexwrap {
+//   -ms-flex-wrap: wrap;
+//   @include flex-wrap(wrap);
+// }
+
+// @mixin flexnowrap {
+//   -ms-flex-wrap: no-wrap;
+//   @include flex-wrap(no-wrap);
+// }
+
+// @mixin flexrow {
+//   -ms-flex-direction: row;
+//   @include flex-direction(row);
+// }
+
+// @mixin flexcolumn {
+//   -ms-flex-direction: column;
+//   @include flex-direction(column);
+// }
+
+// @mixin flexstart {
+//   -ms-flex-align: flex-start;
+//   @include align-items(flex-start);
+// }
+
+// @mixin flexcenter {
+//   -ms-flex-align: center;
+//   @include align-items(center);
+// }
+
+// @mixin flexend {
+//   -ms-flex-align: end;
+//   @include align-items(flex-end);
+// }
+
+// @mixin flexstretch {
+//   -ms-flex-align: stretch;
+//   @include align-items(stretch);
+// }
+
+// @mixin flexspacebetween {
+//   -ms-flex-pack: justify;
+//   @include justify-content(space-between);
+// }
+
+// @mixin flexspaceevenly {
+//   -ms-flex-pack: justify;
+//   @include justify-content(space-evenly);
+// }
+
+// @mixin flexcontentstart {
+//   -ms-flex-pack: flex-start;
+//   @include justify-content(flex-start);
+// }
+
+// @mixin flexcontentcenter {
+//   -ms-flex-pack: center;
+//   @include justify-content(center);
+// }
+
+// @mixin flexcontentend {
+//   -ms-flex-pack: end;
+//   @include justify-content(flex-end);
+// }
+
+
+
+/*------------------------------------*\
+:    Mixins - Miscellaneous
+\*------------------------------------*/
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin horizontal-align($position: relative) {
+  position: $position;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin center-align($position: relative) {
+  position: $position;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin bg-cover {
+  background-size: cover;
+  background-position: center center;
+}
+
+// scales element on hover
+@mixin hoverzoom {
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+// hover transitions
+@mixin link-transition($attr: color) {
+  transition: $attr $link_transition ease-in-out;
+}
+@mixin button-transition() {
+  transition: background $button_transition ease-in-out;
+}
+@mixin button-all-transition() {
+  transition: all $button_transition ease-in-out;
+}
+@mixin background-transition() {
+  transition: background $background_transition ease-in-out;
+}
+
+
+/*------------------------------------*\
+:    Mixins - Media Queries
+\*------------------------------------*/
+
+$large-desktop: 1680px;
+$medium-desktop: 1440px;
+$small-desktop: 1280px;
+$tablet-landscape: 1024px;
+$tablet-portrait: 800px;
+$tablet-portrait-small: 768px;
+$mobile-landscape: 700px;
+$mobile-portrait: 500px;
+$mobile-small: 320px;
+
+@mixin large-desktop {
+  @media (min-width: 0px) and(max-width: #{$large-desktop}) {
+    @content;
+  }
+}
+
+@mixin medium-desktop {
+  @media (min-width: 0px) and(max-width: #{$medium-desktop}) {
+    @content;
+  }
+}
+
+@mixin small-desktop {
+  @media (min-width: 0px) and(max-width: #{$small-desktop}) {
+    @content;
+  }
+}
+
+@mixin small-desktop-down {
+  @media (min-width: 0px) and(max-width: #{$small-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media (min-width: 0px) and(max-width: #{$tablet-landscape}) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape-down {
+  @media (min-width: 0px) and(max-width: #{$tablet-landscape - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @media (min-width: 0px) and(max-width: #{$tablet-portrait}) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait-down {
+  @media (min-width: 0px) and(max-width: #{$tablet-portrait-small - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape {
+  @media (min-width: 0px) and(max-width: #{$mobile-landscape}) {
+    @content;
+  }
+}
+
+@mixin mobile-portrait {
+  @media (min-width: 0px) and(max-width: #{$mobile-portrait}) {
+    @content;
+  }
+}
+
+@mixin mobile-small {
+  @media (min-width: 0px) and(max-width: #{$mobile-small}) {
+    @content;
+  }
+}
+
+/*---------------------------------------*\
+:    Mixins - Mobile-first Media Queries
+:    Usage @include media(tablet) {}
+\*---------------------------------------*/
+
+@mixin media($res) {
+  @if mobile==$res {
+    @media only screen and (min-width: $mobile_width) {
+      @content;
+    }
+  }
+
+  @if tablet==$res {
+    @media only screen and (min-width: $tablet_width) {
+      @content;
+    }
+  }
+
+  @if desktop==$res {
+    @media only screen and (min-width: $desktop_width) {
+      @content;
+    }
+  }
+
+  @if wide==$res {
+    @media only screen and (min-width: $wide_width) {
+      @content;
+    }
+  }
+}

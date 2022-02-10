@@ -1,0 +1,35 @@
+/*------------------------------------*\
+:    Variables
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Type
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Flexbox
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Miscellaneous
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Media Queries
+\*------------------------------------*/
+/*---------------------------------------*\
+:    Mixins - Mobile-first Media Queries
+:    Usage @include media(tablet) {}
+\*---------------------------------------*/
+/*------------------------------------*\
+:    Optional for Gutenberg blocks
+\*------------------------------------*/
+.wp-block-image.alignwide {
+  margin-left: calc(1 / 12 * -100vw);
+  margin-right: calc(1 / 12 * -100vw);
+  max-width: none; }
+  @media (min-width: 0px) and (max-width: 1024px) {
+    .wp-block-image.alignwide {
+      margin-left: calc(1 / 12 * -100vw);
+      margin-right: calc(1 / 12 * -100vw); } }
+  @media (min-width: 0px) and (max-width: 767px) {
+    .wp-block-image.alignwide {
+      margin: 0; } }
+
+/*# sourceMappingURL=maps/blocks.css.map */

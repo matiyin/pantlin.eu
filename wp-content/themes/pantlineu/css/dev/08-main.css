@@ -1,0 +1,135 @@
+/*------------------------------------*\
+:    Variables
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Type
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Flexbox
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Miscellaneous
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Media Queries
+\*------------------------------------*/
+/*---------------------------------------*\
+:    Mixins - Mobile-first Media Queries
+:    Usage @include media(tablet) {}
+\*---------------------------------------*/
+/*------------------------------------*\
+:    Main
+\*------------------------------------*/
+body {
+  background-color: #f9f8f6; }
+
+.c-featured-image {
+  width: 70%;
+  max-width: 350px;
+  border-radius: 50%;
+  margin: 0 auto; }
+  .c-featured-image:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%; }
+  .c-featured-image .custom-logo-link {
+    width: 100%; }
+
+.c-side-title {
+  padding: 0 50px; }
+  @media (min-width: 0px) and (max-width: 1023px) {
+    .c-side-title {
+      padding: 0; } }
+
+.c-load-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  color: #8a9ba8;
+  min-height: 300px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 28px; }
+  @media (min-width: 0px) and (max-width: 1024px) {
+    .c-load-more {
+      font-size: 26px; } }
+  @media (min-width: 0px) and (max-width: 767px) {
+    .c-load-more {
+      font-size: 24px; } }
+  .c-load-more:hover {
+    color: #f25132; }
+
+/*------------------------------------*\
+:    Home
+\*------------------------------------*/
+.home h1 {
+  margin-bottom: 0; }
+
+.home .c-posts h2 a {
+  color: #f25132; }
+  .home .c-posts h2 a:hover {
+    color: #2d72a9; }
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .home h1 {
+    font-size: 13vmin;
+    margin-bottom: 0.2em; } }
+
+.tagline {
+  margin-bottom: 1.4em; }
+
+.c-home-nav {
+  margin-top: 1em; }
+
+.c-section-title {
+  grid-column: 5 / 11;
+  margin: 2em 0 1em;
+  line-height: 1.2;
+  color: #8a9ba8;
+  position: relative;
+  padding-top: 0.5em;
+  font-family: 'Montserrat', serif;
+  font-size: 48px; }
+  @media (min-width: 0px) and (max-width: 1024px) {
+    .c-section-title {
+      font-size: 44px; } }
+  @media (min-width: 0px) and (max-width: 767px) {
+    .c-section-title {
+      font-size: 36px; } }
+  @media (min-width: 0px) and (max-width: 767px) {
+    .c-section-title {
+      grid-column: 1 / 13;
+      text-align: center; } }
+
+.c-home-nav ul {
+  margin: 1.5em 0 1em; }
+
+.c-home-nav li {
+  margin-right: 10px; }
+  .c-home-nav li:last-child {
+    margin-right: 0; }
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .c-home-nav {
+    text-align: center;
+    margin-top: 2em; }
+    .c-home-nav li {
+      margin: 0 0 1em; } }
+
+/*------------------------------------*\
+:    Tree iframe
+\*------------------------------------*/
+.c-iframe {
+  border-top: 4px solid #fff; }
+  .c-iframe iframe {
+    border: none;
+    min-height: 600px;
+    height: 100vh; }
+
+/*# sourceMappingURL=maps/08-main.css.map */

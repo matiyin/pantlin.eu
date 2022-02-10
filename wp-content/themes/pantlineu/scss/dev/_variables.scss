@@ -1,0 +1,48 @@
+/*------------------------------------*\
+:    Variables
+\*------------------------------------*/
+
+// layout
+$size__spacing-unit: 1rem; // 10px, rem is based on <html> element font-size
+
+$content-padding: 50px;
+$content-padding-tl: 40px;
+$content-padding-tp: 30px;
+$content-padding-mp: 20px;
+
+$site-width: 1920px;
+$content-width: 1360px;
+$max-reading-width: 720px;
+$bodytext-line-height: 1.4;
+
+$footer-height: 250px;
+$site-header-height: $content-padding*3;
+$site-header-height-tl: $content-padding-tl*3;
+$site-header-height-mp: 50px;
+$scroll-header-height: 50px;
+$scroll-header-height-tl: 40px;
+
+// colors
+$black: #2b4254;
+$white: #ffffff;
+$blue: #2d72a9;
+$lightblue: #44a5ec;
+$greyblue: #8a9ba8;
+$red: #f25132;
+$darkred: #a83721;
+$primary: $blue;
+$secondary: $red;
+$lightgrey: #f9f8f6;
+
+// Transition timeouts
+$link_transition: 110ms;
+$icon_transition: 120ms;
+$button_transition: 150ms;
+$background_transition: 200ms;
+
+// Responsive widths for Mobile-first approach
+$mobile_width: 600px;
+$tablet_width: 768px;
+$desktop_width: 1168px;
+$wide_width: 1379px;
+
