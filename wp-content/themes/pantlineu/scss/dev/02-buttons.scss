@@ -68,16 +68,24 @@
   }
 }
 
-.wp-block-button.is-style-outline {
-  border: none;
-  color: $red;
-  text-transform: initial;
-  padding-left: 0;
-  a {
+.wp-block-button {
+  &.is-style-outline {
     border: none;
+    color: $red;
+    text-transform: initial;
+    padding-left: 0;
+    a {
+      border: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   }
-  a:hover {
-    text-decoration: underline;
+  .wp-block-button__link:visited {
+    color: $blue;
+    &:hover {
+      color: $red;
+    }
   }
 }
 
